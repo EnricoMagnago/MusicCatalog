@@ -102,3 +102,10 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# resources
+resources/db/*
+!resources/db/README.txt
+
+resources/music_sheets/*
+!resources/music_sheets/README.txt
