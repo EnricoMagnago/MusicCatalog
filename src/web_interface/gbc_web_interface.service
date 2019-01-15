@@ -1,0 +1,13 @@
+[Unit]
+Description=uWSGI instance to serve myproject
+After=network.target
+
+[Service]
+User=GBC
+Group=www-data
+WorkingDirectory=/home/GBC/src/web_interface
+Environment="PATH=/home/GBC/web_interface/venv/bin"
+ExecStart=/home/GBC/web_interface/venv/bin/uwsgi --ini myproject.ini
+
+[Install]
+WantedBy=multi-user.target

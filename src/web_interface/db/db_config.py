@@ -9,7 +9,7 @@ class DbConfig():
 
         config_file_dir = os.path.dirname(os.path.realpath(__file__))
 
-        self.base_dir = os.path.join(config_file_dir, '..', '..')
+        self.base_dir = os.path.join(config_file_dir, '..', '..', '..')
         self.base_dir = os.path.abspath(self.base_dir)
         assert os.path.isdir(self.base_dir), \
             f"Not a directory: {self.base_dir}"
