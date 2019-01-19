@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <title>GBC Music Sheets Catalog</title>
+    <meta name="description" content="GBC Music Sheets Catalog">
+    <meta name="author" content="EnricoMagnago">
+
+    <link rel="stylesheet" href="../css/musicsheets.css">
+  </head>
+
+  <body>
+    <script type="text/template" data-template="listitem">
+      <li>
+        <h3>${title}</h3>
+        <p>${composer}</p>
+        <p>${arranger}</p>
+        <p>${date_added}</p>
+      </li>
+    </script>
+
+    <div id="search_sheets">
+      <form class="form-basic">
+        <div class="form-title-row">
+          <h1>Search Musich Sheet</h1>
+        </div>
+
+        <div class="form-row">
+          <label>Title</label>
+          <input type="text" name="title" id="title" placeholder="title">
+        </div>
+
+        <div class="form-row">
+          <label>Composer</label>
+          <input type="text" name="composer" id="composer" placeholder="composer">
+          <label>Arranger</label>
+          <input type="text" name="arranger" id="arranger" placeholder="arranger">
+        </div>
+
+        <div class="form-row">
+          <label>Added after</label>
+          <input type="date" name="date_added_min" id="date_added_min">
+          <label>Added before</label>
+          <input type="date" name="date_added_max" id="date_added_max">
+        </div>
+
+        <div class="form-row">
+          <button type="button" onClick="submit_query(this.form)">Search</button>
+        </div>
+      </form>
+    </div>
+    <div>
+      <ul id="sheets_list">
+      </ul>
+    </div>
+  </body>
+
+  <script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="../js/musicsheets.js"></script>
+</html>

@@ -12,7 +12,7 @@ class GBCJSONEncoder(JSONEncoder):
                 'title': obj.title,
                 'composer': obj.composer,
                 'arranger': obj.arranger,
-                'date_added': obj.date_added,
+                'date_added': obj.date_added.strftime("%d-%m-%Y"),
                 'instruments': obj.instruments
             }
         else:
